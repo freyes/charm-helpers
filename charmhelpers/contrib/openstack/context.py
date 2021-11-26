@@ -1109,6 +1109,8 @@ class ApacheSSLContext(OSContextGenerator):
                     addr = fallback
 
             endpoint = resolve_address(net_type)
+            log('XXX: (addr, endpoint) -> ({}, {})'.format(addr, endpoint),
+                level=WARNING)
             addresses.append((addr, endpoint))
 
         return sorted(set(addresses))
